@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Aspa
       objectReference: {fileID: 0}
+    - target: {fileID: 2291540259791297887, guid: dd46aee525b62894689c301fca6692ef, type: 3}
+      propertyPath: proyectil
+      value: 
+      objectReference: {fileID: 830563927087784631, guid: 44ff5740edc69564c849a72f3bb1118a, type: 3}
     - target: {fileID: 6804902081923281290, guid: dd46aee525b62894689c301fca6692ef, type: 3}
       propertyPath: m_RootOrder
       value: 4
