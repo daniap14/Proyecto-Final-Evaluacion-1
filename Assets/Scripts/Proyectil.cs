@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour
 {
-    private float speed = 300f;
-    private float timerDestroy = 8f;
+    private float speed = 30f;
+    private float timerDestroy = 10f;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class Proyectil : MonoBehaviour
 
     public void OnCollisionEnter(Collision otherCollider)
     {
-        if (otherCollider.gameObject.CompareTag("Obstacle"))
+        if (otherCollider.gameObject.CompareTag("Obstaculo"))
         {
             Destroy(otherCollider.gameObject);
             Destroy(gameObject);

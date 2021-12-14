@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Aspa
+  - Proyectil
+  - Moneda
+  - Obstaculo
   layers:
   - Default
   - TransparentFX

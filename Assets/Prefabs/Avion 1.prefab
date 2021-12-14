@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7187137275148950104}
   - component: {fileID: 2845974974571768181}
   - component: {fileID: 6229816002090749160}
-  - component: {fileID: 3494840011458822172}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3494840011458822172
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203382761413664645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1712283545722076751
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +189,10 @@ GameObject:
   - component: {fileID: 1455194064743872167}
   - component: {fileID: 891313422919414797}
   - component: {fileID: 1434651475321579647}
+  - component: {fileID: 453826871006457910}
   m_Layer: 0
   m_Name: Aspa
-  m_TagString: Untagged
+  m_TagString: Aspa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,6 +273,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &453826871006457910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837889329316064575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aff2276efe7f6d4ba2f0fc66527d598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerScript: {fileID: 0}
 --- !u!1 &1850752119231509569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1061,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6804902081923281290}
   - component: {fileID: 2291540259791297887}
+  - component: {fileID: 2826185213030961589}
+  - component: {fileID: 318238197}
   m_Layer: 0
   m_Name: Avion 1
   m_TagString: Untagged
@@ -1107,6 +1109,123 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee9e8fc45004234190b5b03ae8f13ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
+  proyectil: {fileID: 830563927087784631, guid: 44ff5740edc69564c849a72f3bb1118a, type: 3}
+  coins: 0
+  monedaClip: {fileID: 0}
+  CoinsText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  audioMusic: {fileID: 0}
+  audioCoin: {fileID: 318238197}
+--- !u!65 &2826185213030961589
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986288125009144782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.3298607, z: 3.0305967}
+  m_Center: {x: 0, y: 0.16493034, z: -0.26059055}
+--- !u!82 &318238197
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986288125009144782}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ccb9b31174a3a43709a113a9c7cf4252, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8031875807121589507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,9 +1238,10 @@ GameObject:
   - component: {fileID: 1033788646347823647}
   - component: {fileID: 8278687837277366961}
   - component: {fileID: 8621908946315592329}
+  - component: {fileID: 8123327988055529482}
   m_Layer: 0
   m_Name: Aspa
-  m_TagString: Untagged
+  m_TagString: Aspa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,6 +1322,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8123327988055529482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8031875807121589507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aff2276efe7f6d4ba2f0fc66527d598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerScript: {fileID: 0}
 --- !u!1 &8115667893283512203
 GameObject:
   m_ObjectHideFlags: 0
